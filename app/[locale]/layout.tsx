@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { getLocale } from "next-intl/server";
-import { font1, font2 } from "@/fonts";
+import { rinsideCompressed, rinsideNarrow } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +20,9 @@ export default async function RootLayout({
   const locale = await getLocale();
   return (
     <html lang={locale}>
-      <body className={`${font1.variable} ${font2.variable} antialiased`}>
+      <body
+        className={`${rinsideCompressed.variable} ${rinsideNarrow.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

@@ -57,6 +57,10 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        ringsideCompressed: ["var(--ringside-compressed)"],
+        ringsideNarrow: ["var(--ringside-narrow)"],
+      },
     },
   },
   plugins: [animate],

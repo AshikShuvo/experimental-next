@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 
-export const font1 = localFont({
+export const rinsideCompressed = localFont({
   src: [
     {
       path: "./public/fonts/ringside/RingsideCompressed.otf",
@@ -10,13 +10,13 @@ export const font1 = localFont({
     {
       path: "./public/fonts/ringside/RingsideCompressed-Bold.otf",
       weight: "700",
-      style: "normal",
+      style: "bold",
     },
   ],
   variable: "--ringside-compressed",
 });
 
-export const font2 = localFont({
+export const rinsideNarrow = localFont({
   src: [
     {
       path: "./public/fonts/ringside/RingsideNarrow.otf",
@@ -24,5 +24,5 @@ export const font2 = localFont({
       style: "normal",
     },
   ],
-  variable: "--ringside-Narrow",
+  variable: "--ringside-narrow",
 });
