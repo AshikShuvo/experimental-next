@@ -55,8 +55,8 @@
         --chart-5: 27 87% 67%;
 
         --radius: 0.5rem;
-        --ringside-compressed: "ringside-compressed";
-        --ringside-narrow: "ringside-narrow";
+        --ringside-compressed: "";
+        --ringside-narrow: "";
     }
 
     .dark {
