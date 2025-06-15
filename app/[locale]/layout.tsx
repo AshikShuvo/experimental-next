@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import "../../styles/globals.scss";
-import { getLocale } from "next-intl/server";
+import { Inter } from "next/font/google";
 import { rinsideCompressed, rinsideNarrow } from "@/fonts";
+import "../../styles/globals.scss";
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,18 +13,30 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "no" }];
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params: { locale },
+  navbar,
+  footer,
+}: {
   children: React.ReactNode;
-}>) {
-  const locale = await getLocale();
+  params: { locale: string };
+  navbar: React.ReactNode;
+  footer: React.ReactNode;
+}) {
   return (
-    <html lang={locale}>
+    <html lang={locale} className="h-full">
       <body
-        className={`${rinsideCompressed.variable} ${rinsideNarrow.variable} antialiased`}
+        className={`${rinsideCompressed.variable} ${rinsideNarrow.variable} antialiased ${inter.className} flex min-h-full flex-col`}
       >
-        {children}
+        {/* Navbar Section */}
+        {navbar}
+
+        {/* Main Content */}
+        <main className="flex-1">{children}</main>
+
+        {/* Footer Section */}
+        {footer}
       </body>
     </html>
   );
