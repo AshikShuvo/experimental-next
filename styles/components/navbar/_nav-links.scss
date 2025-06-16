@@ -1,0 +1,21 @@
+.nav-link-layout{
+    display: flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.nav-links-text{
+    color: var(--primary-primary-main-40, #CD1719);
+    text-align: center;
+
+    /* M3/label/large */
+    font-family: var(--font-ringside-narrow);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 20px; /* 117.647% */
+    letter-spacing: 0.1px;
+} 

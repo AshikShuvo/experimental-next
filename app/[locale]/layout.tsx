@@ -15,7 +15,7 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
   navbar,
   footer,
 }: {
@@ -24,6 +24,9 @@ export default async function LocaleLayout({
   navbar: React.ReactNode;
   footer: React.ReactNode;
 }) {
+  // Await the params to ensure locale is available
+  const { locale } = await Promise.resolve(params);
+
   return (
     <html lang={locale} className="h-full">
       <body

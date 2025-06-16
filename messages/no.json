@@ -1,5 +1,8 @@
 {
   "Index": {
     "title": "Hei verden!"
+  },
+  "navbar": {
+    "menu": "Bestill"
   }
 }

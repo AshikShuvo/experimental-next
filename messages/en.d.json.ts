@@ -5,5 +5,8 @@ declare const messages: {
   Index: {
     title: "Hello world!";
   };
+  navbar: {
+    menu: "menu";
+  };
 };
 export default messages;
